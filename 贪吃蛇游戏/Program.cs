@@ -54,12 +54,12 @@
                         DrawBeginEndScene(width, height, new Vector(), ref sceneID);
                         break;
                     case E_Scene.GameScene:
-                        //游戏场景
+                        //游戏场景-城墙绘制
                         DrawGameSceneWall(width, height, new Vector());
-                        //测试城墙输出
-                        Console.ReadLine();
-                        //测试游戏结束场景
-                        sceneID = E_Scene.EndScene;
+                        ////测试城墙输出
+                        //Console.ReadLine();
+                        ////测试游戏结束场景
+                        //sceneID = E_Scene.EndScene;
                         break;
                     case E_Scene.EndScene:
                         //结束场景
