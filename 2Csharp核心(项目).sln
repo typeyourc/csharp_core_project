@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "必备知识_多脚本文件", "必备知识_多脚本文件\必备知识_多脚本文件.csproj", "{19EE1504-4492-4A27-80D9-659B357326C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "必备知识_多脚本文件", "必备知识_多脚本文件\必备知识_多脚本文件.csproj", "{19EE1504-4492-4A27-80D9-659B357326C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "贪吃蛇游戏", "贪吃蛇游戏\贪吃蛇游戏.csproj", "{61D81BDB-CAAE-457A-B6BE-DC86391F0472}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{19EE1504-4492-4A27-80D9-659B357326C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19EE1504-4492-4A27-80D9-659B357326C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19EE1504-4492-4A27-80D9-659B357326C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D81BDB-CAAE-457A-B6BE-DC86391F0472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D81BDB-CAAE-457A-B6BE-DC86391F0472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D81BDB-CAAE-457A-B6BE-DC86391F0472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D81BDB-CAAE-457A-B6BE-DC86391F0472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
