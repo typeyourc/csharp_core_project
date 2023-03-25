@@ -9,7 +9,7 @@ namespace 贪吃蛇游戏
     /// <summary>
     /// 玩家类
     /// </summary>
-    internal class Player : IHitWall, IHitYourself, IDraw
+    internal class Player : IHitWall, IHitYourself, IDraw , IMove
     {
         public Grid[] gPlayer;
 
@@ -38,6 +38,11 @@ namespace 贪吃蛇游戏
         public void HitYourself()
         {
 
+        }
+
+        public void Move()
+        {
+            
         }
     }
 
