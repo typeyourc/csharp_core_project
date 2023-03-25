@@ -1,7 +1,9 @@
-﻿namespace 贪吃蛇游戏
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace 贪吃蛇游戏
 {
     /// <summary>
-    /// 游戏的三个大场景
+    /// 游戏三大场景枚举
     /// </summary>
     enum E_Scene
     {
@@ -19,12 +21,30 @@
         EndScene,
     }
     /// <summary>
-    /// 坐标类
+    /// 格子类型
     /// </summary>
-    class Vector
+    enum E_TypeOfGrid
     {
-        public int x;
-        public int y;
+        /// <summary>
+        /// 玩家头部
+        /// </summary>
+        Head,
+        /// <summary>
+        /// 玩家身体
+        /// </summary>
+        Body,
+        /// <summary>
+        /// 食物
+        /// </summary>
+        Food,
+        /// <summary>
+        /// 城墙
+        /// </summary>
+        Wall,
+        /// <summary>
+        /// 空格子
+        /// </summary>
+        Empty,
     }
 
     internal class Program
@@ -35,8 +55,8 @@
             //游戏场景ID，初始赋值为开始场景
             E_Scene sceneID = E_Scene.BeginScene;
             //窗口大小设置
-            int width = 80;
-            int height = 19;
+            const int width = 80;
+            const int height = 19;
             Console.SetWindowSize(width, height);
             Console.SetBufferSize(width, height);
             Console.CursorVisible = false;
