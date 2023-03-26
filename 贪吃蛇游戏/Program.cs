@@ -74,12 +74,27 @@ namespace 贪吃蛇游戏
                         DrawBeginEndScene(width, height, new Vector(), ref sceneID);
                         break;
                     case E_Scene.GameScene:
+                        #region 2.1游戏场景-城墙绘制
                         //游戏场景-城墙绘制
                         DrawGameSceneWall(width, height, new Vector());
                         ////测试城墙输出
                         //Console.ReadLine();
                         ////测试游戏结束场景
                         //sceneID = E_Scene.EndScene;
+                        #endregion
+                        #region 2.2游戏具体场景
+                        //绘制玩家
+                        Player p = new Player();
+                        p.Draw();
+                        //绘制食物
+                        Food f = new Food();
+                        f.RandomPos(p);
+                        f.Draw();
+                        //玩家移动
+                        p.Move(ref sceneID, f);
+                        //测试语句(用于卡主程序)
+                        Console.ReadLine();
+                        #endregion
                         break;
                     case E_Scene.EndScene:
                         //结束场景

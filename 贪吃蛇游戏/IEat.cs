@@ -11,6 +11,6 @@ namespace 贪吃蛇游戏
     /// </summary>
     internal interface IEat
     {
-        public void Eat();
+        public bool Eat(Food xFood);
     }
 }

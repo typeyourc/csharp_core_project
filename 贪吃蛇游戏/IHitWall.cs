@@ -11,6 +11,6 @@ namespace 贪吃蛇游戏
     /// </summary>
     internal interface IHitWall
     {
-        public void HitWall();
+        public bool HitWall();
     }
 }

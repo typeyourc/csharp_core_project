@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace 贪吃蛇游戏
 {
-    /// <summary>
-    /// 随机变化位置接口
-    /// </summary>
-    internal interface IRandomChangePos
+    internal interface IBeEaten
     {
-        public void RandomChangePos();
+        public void BeEaten();
     }
 }

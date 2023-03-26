@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace 贪吃蛇游戏
 {
-
     /// <summary>
-    /// 格子类
+    /// 随机变化位置接口
     /// </summary>
-    internal class Grid
+    internal interface IRandomPos
     {
-        public Vector vGrid = new Vector();
-        public E_TypeOfGrid typeOfGrid = new E_TypeOfGrid();
+        public void RandomPos(Player p);
     }
 }

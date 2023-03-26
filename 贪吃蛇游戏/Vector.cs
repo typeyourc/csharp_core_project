@@ -15,4 +15,3 @@ namespace 贪吃蛇游戏
         public int y;
     }
 }
-}

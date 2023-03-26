@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace 贪吃蛇游戏
 {
-
     /// <summary>
-    /// 格子类
+    /// 增长接口(吃掉一个食物的时候，实现身体增长)
     /// </summary>
-    internal class Grid
+    internal interface IGrow
     {
-        public Vector vGrid = new Vector();
-        public E_TypeOfGrid typeOfGrid = new E_TypeOfGrid();
+        public void Grow(Food food);
     }
 }
