@@ -11,6 +11,6 @@ namespace 贪吃蛇游戏
     /// </summary>
     internal interface IDraw
     {
-        public void Draw();
+        public void Draw(int flag);
     }
 }

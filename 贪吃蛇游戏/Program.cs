@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace 贪吃蛇游戏
+﻿namespace 贪吃蛇游戏
 {
     /// <summary>
     /// 游戏三大场景枚举
@@ -85,13 +83,17 @@ namespace 贪吃蛇游戏
                         #region 2.2游戏具体场景
                         //绘制玩家
                         Player p = new Player();
-                        p.Draw();
+                        p.Draw(0);
                         //绘制食物
                         Food f = new Food();
                         f.RandomPos(p);
-                        f.Draw();
+                        f.Draw(0);
                         //玩家移动
-                        p.Move(ref sceneID, f);
+                        while (true)
+                        {
+                            p.Move(ref sceneID, f);
+                        }
+
                         //测试语句(用于卡主程序)
                         Console.ReadLine();
                         #endregion

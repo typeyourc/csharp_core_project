@@ -29,7 +29,7 @@ namespace 贪吃蛇游戏
             
         }
 
-        public void Draw()
+        public void Draw(int flag)
         {
             Console.SetCursorPosition(gFood.vGrid.x, gFood.vGrid.y);
             Console.ForegroundColor = ConsoleColor.Green;
@@ -44,10 +44,16 @@ namespace 贪吃蛇游戏
                 int flag = 0;
                 int randomIndex = r.Next(0, 646);
                 //Map.grids[randomIndex] = new Grid();
-                gFood.vGrid = Map.grids[randomIndex].vGrid;
+                //下面这句一直提示没有实例化，不知为啥
+                //下面引用传递改成值传递
+                //gFood.vGrid = Map.grids[randomIndex].vGrid;
+                gFood.vGrid.x = Map.grids[randomIndex].vGrid.x;
+                gFood.vGrid.y = Map.grids[randomIndex].vGrid.y;
                 for (int i = 0; i < p.gPlayer.Length; i++)
                 {
-                    if (gFood.vGrid == p.gPlayer[i].vGrid)
+                    //下面引用传递改成值传递
+                    //if (gFood.vGrid == p.gPlayer[i].vGrid)
+                    if (gFood.vGrid.x == p.gPlayer[i].vGrid.x && gFood.vGrid.y == p.gPlayer[i].vGrid.y)
                     {
                         flag = 1;
                         break;
