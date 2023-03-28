@@ -72,6 +72,7 @@
                         DrawBeginEndScene(width, height, new Vector(), ref sceneID);
                         break;
                     case E_Scene.GameScene:
+                        //游戏中
                         #region 2.1游戏场景-城墙绘制
                         //游戏场景-城墙绘制
                         DrawGameSceneWall(width, height, new Vector());
@@ -83,19 +84,30 @@
                         #region 2.2游戏具体场景
                         //绘制玩家
                         Player p = new Player();
-                        p.Draw(0);
+                        p.Draw();
                         //绘制食物
                         Food f = new Food();
                         f.RandomPos(p);
-                        f.Draw(0);
+                        f.Draw();
+                        int flag;
                         //玩家移动
                         while (true)
                         {
-                            p.Move(ref sceneID, f);
+                            flag = p.Move(ref sceneID, f);
+                            if (flag == 1)
+                            {
+                                break;
+                            }
+                            else if(f.BeEaten(flag))
+                            {
+                                //生成新食物
+                                f.RandomPos(p);
+                                f.Draw();
+                            }
                         }
 
                         //测试语句(用于卡主程序)
-                        Console.ReadLine();
+                        //Console.ReadLine();
                         #endregion
                         break;
                     case E_Scene.EndScene:

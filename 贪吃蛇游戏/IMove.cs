@@ -11,6 +11,6 @@ namespace 贪吃蛇游戏
     /// </summary>
     internal interface IMove
     {
-        public void Move(ref E_Scene sceneID, Food xFood);
+        public int Move(ref E_Scene sceneID, Food xFood);
     }
 }

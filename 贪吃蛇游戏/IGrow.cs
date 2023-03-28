@@ -12,6 +12,6 @@ namespace 贪吃蛇游戏
     internal interface IGrow
     {
         public void Grow(Food food);
-        public void Grow(EmptyGrid emptyGrid);
+        public void Grow(EmptyGrid emptyGrid, Grid x);
     }
 }

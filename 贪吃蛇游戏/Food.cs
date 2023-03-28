@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace 贪吃蛇游戏
 {
     /// <summary>
-    /// 食物类
+    /// 食物类(真食物类)
     /// </summary>
     internal class Food : IDraw , IRandomPos, IBeEaten
     {
@@ -24,16 +24,33 @@ namespace 贪吃蛇游戏
             gFood.vGrid.y = 10;
         }
 
-        public void BeEaten()
+        public bool BeEaten(int x)
         {
-            
+            if (x == 2)
+            {
+                return true;
+            }
+            else return false;
         }
 
-        public void Draw(int flag)
+        public bool BeEaten()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 绘制食物需要的绘制函数
+        /// </summary>
+        public void Draw()
         {
             Console.SetCursorPosition(gFood.vGrid.x, gFood.vGrid.y);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("¤");
+        }
+
+        public void Draw(int flag, Grid x)
+        {
+            throw new NotImplementedException();
         }
 
         public void RandomPos(Player p)

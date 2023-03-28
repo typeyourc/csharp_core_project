@@ -11,6 +11,6 @@ namespace 贪吃蛇游戏
     /// </summary>
     internal interface IHitYourself
     {
-        public bool HitYourself();
+        public bool HitYourself(Grid x);
     }
 }
